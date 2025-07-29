@@ -30,4 +30,4 @@ Add the contents of this file to your `~/.bashrc`:
 ### Fish
  
  Add the contents of this file to your `~/.config/fish/functions/fish_command_not_found.fish`:
-[`OopsinatorBASH`](functions/fish_command_not_found.fish)
+[`OopsinatorFISH`](functions/fish_command_not_found.fish)
