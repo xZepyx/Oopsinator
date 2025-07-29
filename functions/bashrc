@@ -1,0 +1,69 @@
+# Put this in ~/.bashrc (Only works for bash)
+# ┌──────────────────────────────────────────────────────────────┐
+# │ © 2020-2025 Aditya Yadav <zepyxunderscore@gmail.com>         |
+# │ Licensed under GNU-GPL3. You are free to copy, modify, and   │
+# │ redistribute under the same license.                         │
+# └──────────────────────────────────────────────────────────────┘
+
+# ── Bash: 50 Savage Command-Not-Found Insults ──
+
+INSULTS=(
+  "Did you mistype or is your keyboard drunk?"
+  "Command not found. Brain not found either."
+  "You're the reason man pages exist."
+  "Typed like a toddler on caffeine."
+  "That command? It died of cringe."
+  "Even a potato can type better."
+  "Next time, let your cat try. Might get closer."
+  "You're basically speedrunning incompetence."
+  "Mistyping like it's an Olympic sport."
+  "You type like you’re trying to summon Satan."
+  "Linux is crying. Just stop."
+  "This isn’t hacking. This is embarrassing."
+  "You missed so hard, Vim started shaking."
+  "The command line just sighed."
+  "Even Clippy gave up on you."
+  "Your keyboard wants a new owner."
+  "404: Skill not found."
+  "That typo gave me cancer."
+  "I’ve seen AI generate better commands."
+  "Congrats, you typed literal garbage."
+  "You make typos look intentional."
+  "Try typing with your eyes open next time."
+  "You’re a walking StackOverflow question."
+  "Was that a command or an error generator?"
+  "You misspelled 'help'."
+  "You're the reason people use GUIs."
+  "Command not found. Neither is your talent."
+  "Go home, you're drunk on typos."
+  "Mistyped again? Classic you."
+  "Every time you type, a sysadmin cries."
+  "If you were a script, you'd be /dev/null."
+  "Your command line skills belong in the trash."
+  "Try again. This time, sober."
+  "Just alias 'fail' to your name."
+  "Type slower. Think harder. Or don’t."
+  "Your autocorrect gave up years ago."
+  "If mistakes built muscles, you'd be jacked."
+  "Command not found. Ego destroyed."
+  "Even Notepad would reject that."
+  "You just softlocked your own terminal."
+  "You're keyboard smashing with confidence."
+  "That wasn't a command. That was a cry for help."
+  "Shell shock from secondhand embarrassment."
+  "Why type when you can guess wrong every time?"
+  "Commands aren't supposed to look like gibberish."
+  "This isn't improv. Learn the script."
+  "You pressed keys. That’s about it."
+  "Error 9000: User is untrainable."
+  "That wasn’t a typo. That was performance art."
+  "The shell refuses to acknowledge that."
+)
+
+command_not_found_handle() {
+  local cmd="$1"
+  local i=$(( $(date +%s%N) % ${#INSULTS[@]} ))
+  local insult="${INSULTS[$i]}"
+  echo -e "\033[1;31m$insult\033[0m (You typed: '$cmd')"
+  return 127
+}
