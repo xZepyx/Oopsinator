@@ -31,3 +31,6 @@ Add the contents of this file to your `~/.bashrc`:
  
  Add the contents of this file to your `~/.config/fish/functions/fish_command_not_found.fish`:
 [`OopsinatorFISH`](functions/fish_command_not_found.fish)
+
+
+> Its just made for fun don't take the insults seriously. ;)
